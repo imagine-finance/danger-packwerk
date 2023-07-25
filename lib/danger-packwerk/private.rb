@@ -17,7 +17,7 @@ module DangerPackwerk
         load_paths = Packwerk::RailsLoadPaths.for(Dir.pwd, environment: 'test')
         ConstantResolver.new(
           root_path: Dir.pwd,
-          load_paths: T.unsafe(load_paths).keys
+          load_paths: load_paths
         )
       end
     end
